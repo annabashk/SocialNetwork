@@ -11,6 +11,6 @@ namespace SocialNetwork.DAL.Entities
         public int id { get; set; }
         public string content { get; set; }
         public int sender_id { get; set; }
-        public int recioient_id { get; set; }
+        public int recipient_id { get; set; }
     }
 }
