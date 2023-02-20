@@ -59,7 +59,7 @@ namespace SocialNetwork.BLL.Services
             if (messageSendingData.Content.Length > 5000) 
                 throw new ArgumentOutOfRangeException();
 
-            var findUserEntity = this.userRepository.FindByEmail(messageSendingData.Content);
+            var findUserEntity = this.userRepository.FindByEmail(messageSendingData.RecipientEmail);
             if (findUserEntity is null) throw new UserNotFoundException();
 
             var messageEntity = new MessageEntity()
